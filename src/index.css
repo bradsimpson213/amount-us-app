@@ -1,14 +1,12 @@
 body {
   margin: 0;
   background-color: black;
-  
 }
 
 @font-face {
   font-family: 'Amoung-Us';
   src: url('./assets/fonts/among-us.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Crewmate';
   src: url('./assets/fonts/VCR-OSD-mono.ttf') format('truetype');
