@@ -6,15 +6,15 @@ import orangeCrewImage  from "./assets/images/orange-crew.png";
 const useStyles = makeStyles({
     root:{
         backgroundColor: 'black',
-        border: '1px solid black',
-        height: '140px',
+        border: 'none',
+        height: '150px',
         width: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     navImage: {
-        height: '120px',
+        height: '130px',
         margin: '0px 15px 0px 15px'
     },
     titleContainer: {
@@ -27,11 +27,11 @@ const useStyles = makeStyles({
         alignItems: 'center',
     },
     mainTitle: {
-        fontSize: '80px',
+        fontSize: '90px',
         marginBottom: '30px'
     },
     subTitle: {
-        fontSize: '20px',
+        fontSize: '30px',
         marginTop: '-40px',
     }
 });

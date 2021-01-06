@@ -1,14 +1,17 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
+
 import NavBar from "./NavBar";
-import Paper from '@material-ui/core/Paper';
+import ScoresList from "./ScoresList";
+
 import { makeStyles } from "@material-ui/core/styles";
-// import './App.css';
+
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: "blue",
-    height: '100%',
-    width: '100%'
+    backgroundColor: "#4d4d4d",
+    height: '100vh',
+    width: '100vw'
   }
 });
 
@@ -16,10 +19,15 @@ const App = () => {
   const classes = useStyles();
 
   return (
-      <div 
-          className={ classes.root }
-      >
-          <NavBar />
+      <div>
+        <NavBar />
+        <Switch>
+          <Route exact 
+            path="/"
+            render={ () => 
+              <ScoresList  /> }
+          />
+        </Switch>
       </div>
   );
 }
