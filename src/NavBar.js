@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import blueCrewImage  from "./assets/images/blue-crew.png";
 import orangeCrewImage  from "./assets/images/orange-crew.png";
@@ -33,6 +34,13 @@ const useStyles = makeStyles({
     subTitle: {
         fontSize: '30px',
         marginTop: '-40px',
+    },
+    links:{
+        color: 'blue',
+        fontFamily: 'Amoung-us',
+        textDecoration: 'none',
+        fontSize: '30px',
+        margin: '0px 25px 0px 25px'
     }
 });
 
@@ -47,10 +55,34 @@ const NavBar = () => {
                 src={ blueCrewImage } 
                 alt="blue crewmate"
             />
+            <Link 
+                to="/"
+                className={ classes.links}
+            >
+                Addition
+            </Link>
+            <Link 
+                to="/"
+                className={ classes.links}
+            >
+                Subtraction
+            </Link>
             <div className={ classes.titleContainer }>
                 <h1 className={ classes.mainTitle }>Amount Us</h1>
                     <h4 className={ classes.subTitle } >Math "Among Us" Style</h4>
             </div>
+            <Link 
+                to="/"
+                className={ classes.links}
+            >
+                Multiplication
+            </Link>
+            <Link 
+                to="/"
+                className={ classes.links}
+            >
+                Division
+            </Link>
             <img 
                 className={ classes.navImage } 
                 src={ orangeCrewImage } 
