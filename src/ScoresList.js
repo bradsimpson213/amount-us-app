@@ -6,10 +6,11 @@ const useStyles = makeStyles({
     root: {
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'       
+        alignItems: 'center',
+        margin: '30px 0px 0px 0px'       
     },
     scoreCard: {
-        height: '700px',
+        height: '600px',
         width: '500px',
         color: 'blue',
         backgroundColor: '#4d4d4d',

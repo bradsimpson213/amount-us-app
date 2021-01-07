@@ -3,10 +3,16 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
     root: {
+        position: 'sticky',
+        bottom: '0',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         flexShrink: '0',
         color: 'white',
         textAlign: 'center',
-        margin: '15px 0px 15px 0px'    
+        margin: '15px 0px 15px 0px',
+        padding: '15px 0px 15px 0px',    
     },
     label: {
         fontFamily: 'Amoung-us',
