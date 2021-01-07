@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 import blueCrewImage  from "./assets/images/blue-crew.png";
 import orangeCrewImage  from "./assets/images/orange-crew.png";
 
@@ -40,7 +41,15 @@ const useStyles = makeStyles({
         fontFamily: 'Amoung-us',
         textDecoration: 'none',
         fontSize: '30px',
-        margin: '0px 25px 0px 25px'
+        margin: '0px 35px 0px 35px'
+    },
+    linkButton: {
+        color: 'white',
+        fontFamily: 'Amoung-us',
+        fontSize: '20px',
+        border: '1px solid white',
+        padding: '2px 5px 2px 5px',
+        margin: '0px 20px 0px 20px'
     }
 });
 
@@ -55,6 +64,12 @@ const NavBar = () => {
                 src={ blueCrewImage } 
                 alt="blue crewmate"
             />
+            <Button 
+                className={ classes.linkButton }
+                variant="outlined"
+            >
+                    Home
+            </Button>
             <Link 
                 to="/"
                 className={ classes.links}
@@ -83,6 +98,12 @@ const NavBar = () => {
             >
                 Division
             </Link>
+            <Button 
+                className={ classes.linkButton }
+                variant="outlined"
+            >
+                Log In
+            </Button>
             <img 
                 className={ classes.navImage } 
                 src={ orangeCrewImage } 
