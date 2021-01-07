@@ -14,6 +14,7 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        borderBottom: '1px solid white'
     },
     navImage: {
         height: '130px',

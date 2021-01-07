@@ -13,12 +13,16 @@ const useStyles = makeStyles({
         height: '600px',
         width: '500px',
         color: 'blue',
-        backgroundColor: '#4d4d4d',
-        borderRadius: '10px',
+        backgroundColor: 'black',
+        borderRadius: '15px',
+        border: '1px solid white',
         fontFamily: 'Crewmate',
         textAlign: 'center',
         fontSize: '35px',
         marginTop: '40px'
+    },
+    title: {
+        margin: '15px 0px 0px 0px'
     }
 });
 
@@ -33,7 +37,7 @@ const ScoresList = () => {
                 variant="outline"
                 elevation={3}
             >
-                <h1>ScoresList</h1>
+                <h1 className={ classes.title }>ScoresList</h1>
             </Paper>
         </div>
       

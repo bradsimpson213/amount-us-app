@@ -11,6 +11,7 @@ const useStyles = makeStyles({
         flexShrink: '0',
         color: 'white',
         textAlign: 'center',
+        borderTop: '1px solid white',
         margin: '15px 0px 15px 0px',
         padding: '15px 0px 15px 0px',    
     },
