@@ -31,7 +31,7 @@ const App = () => {
                 <ScoresList  /> }
             />
             <Route exact 
-              path="/login"
+              path="/login/"
               render={ () => 
                 <LoginForm  /> }
             />

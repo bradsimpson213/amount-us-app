@@ -1,7 +1,8 @@
-import React from "react";
-import { Link, useHistory } from "react-router-dom";
+
+// React importsimport React from "react";
+import { Link } from "react-router-dom";
+// Style imports
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 import blueCrewImage  from "./assets/images/blue-crew.png";
 import orangeCrewImage  from "./assets/images/orange-crew.png";
 
@@ -47,17 +48,21 @@ const useStyles = makeStyles({
     linkButton: {
         color: 'white',
         fontFamily: 'Amoung-us',
-        fontSize: '20px',
+        fontSize: '25px',
         border: '1px solid white',
-        padding: '2px 5px 2px 5px',
-        margin: '0px 20px 0px 20px'
+        borderRadius: '5px',
+        padding: '10px 5px 0px 5px',
+        margin: '0px 20px 5px 20px',
+        textDecoration: 'none',
+        textAlign: 'center',
+        height: '35px',
+        width: '65px'
     }
 });
 
 
 const NavBar = () => {
     const classes = useStyles();
-    let history = useHistory();
 
     return (
         <div className={ classes.root }>
@@ -66,12 +71,12 @@ const NavBar = () => {
                 src={ blueCrewImage } 
                 alt="blue crewmate"
             />
-            <Button 
+            <Link 
                 className={ classes.linkButton }
-                variant="outlined"
+                to="/"
             >
                     Home
-            </Button>
+            </Link>
             <Link 
                 to="/"
                 className={ classes.links}
@@ -100,13 +105,12 @@ const NavBar = () => {
             >
                 Division
             </Link>
-            <Button 
+            <Link 
                 className={ classes.linkButton }
-                variant="outlined"
-                onClick={ history.push('/login') }
+                to="/login"
             >
                 Log In
-            </Button>
+            </Link>
             <img 
                 className={ classes.navImage } 
                 src={ orangeCrewImage } 
