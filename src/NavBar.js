@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import blueCrewImage  from "./assets/images/blue-crew.png";
@@ -57,6 +57,7 @@ const useStyles = makeStyles({
 
 const NavBar = () => {
     const classes = useStyles();
+    let history = useHistory();
 
     return (
         <div className={ classes.root }>
@@ -102,6 +103,7 @@ const NavBar = () => {
             <Button 
                 className={ classes.linkButton }
                 variant="outlined"
+                onClick={ history.push('/login') }
             >
                 Log In
             </Button>

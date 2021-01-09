@@ -1,9 +1,14 @@
+// React imports
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
+// Custom Component imports
 import NavBar from "./NavBar";
 import ScoresList from "./ScoresList";
+import LoginForm from "./LoginForm";
 import Footer from "./Footer";
+// Style imports
+import { makeStyles } from "@material-ui/core/styles";
+
 
 const useStyles = makeStyles({
   root: {
@@ -24,6 +29,11 @@ const App = () => {
               path="/"
               render={ () => 
                 <ScoresList  /> }
+            />
+            <Route exact 
+              path="/login"
+              render={ () => 
+                <LoginForm  /> }
             />
           </Switch>
         </div>
