@@ -1,5 +1,11 @@
+// React imports
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
+// Material Component imports
+import FormControl from '@material-ui/core/FormControl';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+// Style imports
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -10,6 +16,9 @@ const useStyles = makeStyles({
         margin: '30px 0px 0px 0px', 
     },
     container: {
+        // '& .MuiTextField-root': {
+        //     width: '25ch',
+        // },
         border: '1px solid white',
         borderRadius: '15px',
         height: '600px',
@@ -19,6 +28,9 @@ const useStyles = makeStyles({
         fontFamily: 'Amoung-us',
         fontSize: '30px',
         marginTop: '40px',
+    },
+    form: {
+        color: 'white',
     }
 
 });
@@ -29,17 +41,11 @@ const LoginForm = () => {
         <div className={ classes.root }>
             <div className={ classes.container }>
             <h1>Login</h1>
-                <form 
-                    noValidate 
-                    autoComplete="off"
-                >
-                <TextField 
-                    id="outlined-required" 
-                    label="Username"
-                    required
-                    defaultValue="Username" 
-                />
-                </form> 
+            <FormControl className={ classes.form }>
+                <InputLabel htmlFor="my-input">Email address</InputLabel>
+                <Input id="my-input" aria-describedby="my-helper-text" />
+                <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
+            </FormControl>
             </div>
         </div>
     )
