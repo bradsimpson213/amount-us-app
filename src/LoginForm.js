@@ -42,9 +42,25 @@ const LoginForm = () => {
             <div className={ classes.container }>
             <h1>Login</h1>
             <FormControl className={ classes.form }>
-                <InputLabel htmlFor="my-input">Email address</InputLabel>
-                <Input id="my-input" aria-describedby="my-helper-text" />
-                <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
+                <InputLabel 
+                    className={ classes.form }
+                    color="default" 
+                    htmlFor="my-input"
+                >
+                    Email address
+                </InputLabel>
+                <Input 
+                    className={ classes.form }
+                    id="my-input" 
+                    color="default" 
+                    aria-describedby="my-helper-text"
+                />
+                <FormHelperText 
+                    className={ classes.form }
+                    id="my-helper-text"
+                >
+                    We'll never share your email.
+                </FormHelperText>
             </FormControl>
             </div>
         </div>
