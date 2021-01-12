@@ -8,13 +8,13 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: '30px 0px 0px 0px', 
+        margin: '50px 0px 0px 0px', 
     },
     container: {
         border: '1px solid white',
         borderRadius: '15px',
-        height: '600px',
-        width: '500px',
+        height: '350px',
+        width: '450px',
         color: 'white',
         textAlign: 'center',
         fontFamily: 'Amoung-us',
@@ -25,6 +25,19 @@ const useStyles = makeStyles({
     },
     form: {
         color: 'white',
+        display: 'grid',
+        gridTemplateColumns: "1fr 2fr",
+        padding: '0px 20px 0px 20px',
+        "& label":{
+            gridColumn: '1'
+        },
+        "& imput": {
+            gridColumn: '2'
+        },
+        "& button": {
+            width: '100px',
+            alignSelf: 'center'
+        }
     }
 
 });
@@ -35,7 +48,7 @@ const LoginForm = () => {
         <div className={ classes.root }>
             <div className={ classes.container }>
             <h1>Login</h1>
-            <form>
+            <form className={ classes.form }>
                 <div>
                     <label for="username">Username:</label>
                     <input 
