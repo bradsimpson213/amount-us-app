@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 import ScoresList from "./ScoresList";
 import LoginForm from "./LoginForm";
+import SignUpForm from "./SignUpForm";
 import Footer from "./Footer";
 // Style imports
 import { makeStyles } from "@material-ui/core/styles";
@@ -34,6 +35,11 @@ const App = () => {
               path="/login/"
               render={ () => 
                 <LoginForm  /> }
+            />
+            <Route exact 
+              path="/signup/"
+              render={ () => 
+                <SignUpForm  /> }
             />
           </Switch>
         </div>
