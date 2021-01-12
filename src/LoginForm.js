@@ -1,5 +1,6 @@
 // React imports
 import React from 'react';
+import { Link } from 'react-router-dom';
 // Style imports
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -13,8 +14,8 @@ const useStyles = makeStyles({
     container: {
         border: '1px solid white',
         borderRadius: '15px',
-        height: '350px',
-        width: '450px',
+        height: '425px',
+        width: '400px',
         color: 'white',
         textAlign: 'center',
         fontFamily: 'Amoung-us',
@@ -25,19 +26,30 @@ const useStyles = makeStyles({
     },
     form: {
         color: 'white',
-        display: 'grid',
-        gridTemplateColumns: "1fr 2fr",
+        display: 'flex',
+        flexFlow: 'column',
+        justifyContent: 'center',
         padding: '0px 20px 0px 20px',
-        "& label":{
-            gridColumn: '1'
-        },
-        "& imput": {
-            gridColumn: '2'
-        },
         "& button": {
             width: '100px',
-            alignSelf: 'center'
+            height: '40px',
+            alignSelf: 'center',
+            margin: '15px 0px 35px 0px',
+            fontFamily: 'Amoung-us',
+            fontSize: '25px',
+            fontWeight: 'bold'
         }
+    },
+    inputDiv: {
+        display: 'flex',
+        justifyContent: 'center',
+        margin: '5px 0px 5px 0px',
+        '& label': {
+            margin: '0px 10px 0px 0px'
+        }
+    },
+    signUpLink: {
+        margin: '10px 0px 0px 0px'
     }
 
 });
@@ -49,21 +61,21 @@ const LoginForm = () => {
             <div className={ classes.container }>
             <h1>Login</h1>
             <form className={ classes.form }>
-                <div>
+                <div className={ classes.inputDiv }>
                     <label for="username">Username:</label>
                     <input 
                         name="username" 
                         type='text'
                     />
                 </div>
-                <div>
+                <div className={ classes.inputDiv }>
                     <label for="password">Password:</label>
                     <input 
                         name="password" 
                         type='password'
                     />
                 </div>
-                <div>
+                <div className={ classes.inputDiv }>
                     <label for="confirm-password">Confirm Password:</label>
                     <input 
                         name="confirm-password" 
@@ -72,6 +84,11 @@ const LoginForm = () => {
                 </div>
                 <button type='submit'>Submit</button>             
             </form>
+                <div classname={ classes.signUpLink }>
+                    <span>Don't have an account? </span>
+                    <Link to="/signup">Sign Up Here!</Link>
+                </div>
+            
             </div>
         </div>
     )
