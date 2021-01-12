@@ -110,7 +110,7 @@ const NavBar = () => {
                 className={ classes.linkButton }
                 to="/login"
             >
-                Log In
+                Login
             </Link>
             <img 
                 className={ classes.navImage } 

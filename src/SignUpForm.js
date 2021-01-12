@@ -1,5 +1,6 @@
 // React imports
 import React from 'react';
+import { Link } from 'react-router-dom';
 // Style imports
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -13,7 +14,7 @@ const useStyles = makeStyles({
     container: {
         border: '1px solid white',
         borderRadius: '15px',
-        height: '425px',
+        height: '550px',
         width: '400px',
         color: 'white',
         textAlign: 'center',
@@ -47,6 +48,9 @@ const useStyles = makeStyles({
             margin: '0px 10px 0px 0px'
         }
     },
+    signUpLink: {
+        margin: '10px 0px 0px 0px'
+    }
 })
 
 const SignUpForm = () => {
@@ -57,6 +61,20 @@ const SignUpForm = () => {
             <div className={ classes.container }>
             <h1>Sign Up</h1>
             <form className={ classes.form }>
+                <div className={ classes.inputDiv }>
+                    <label for="first-name">First Name:</label>
+                    <input 
+                        name="first-name" 
+                        type='text'
+                    />
+                </div>
+                <div className={ classes.inputDiv }>
+                    <label for="last-name">Last Name:</label>
+                    <input 
+                        name="last-name" 
+                        type='text'
+                    />
+                </div>
                 <div className={ classes.inputDiv }>
                     <label for="username">Username:</label>
                     <input 
@@ -87,6 +105,10 @@ const SignUpForm = () => {
                 </div>
                 <button type='submit'>Submit</button>             
             </form>
+                <div classname={ classes.signUpLink }>
+                    <span>Already have an account? </span>
+                    <Link to="/login">Login Here!</Link>
+                </div>
             </div>
         </div>
     )

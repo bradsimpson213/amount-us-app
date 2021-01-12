@@ -88,7 +88,6 @@ const LoginForm = () => {
                     <span>Don't have an account? </span>
                     <Link to="/signup">Sign Up Here!</Link>
                 </div>
-            
             </div>
         </div>
     )
