@@ -7,6 +7,7 @@ import ScoresList from "./ScoresList";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
 import Footer from "./Footer";
+import Multiplication from "./Multiplication";
 // Style imports
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -40,6 +41,11 @@ const App = () => {
               path="/signup/"
               render={ () => 
                 <SignUpForm  /> }
+            />
+            <Route exact 
+              path="/multiplication/"
+              render={ () => 
+                <Multiplication  /> }
             />
           </Switch>
         </div>

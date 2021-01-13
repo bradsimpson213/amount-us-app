@@ -95,7 +95,7 @@ const NavBar = () => {
                     <h4 className={ classes.subTitle } >Math "Among Us" Style</h4>
             </div>
             <Link 
-                to="/"
+                to="/multiplication"
                 className={ classes.links}
             >
                 Multiplication
