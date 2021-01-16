@@ -26,6 +26,24 @@ const useStyles = makeStyles({
     },
     title: {
         margin: '15px 0px 0px 0px'
+    },
+    subTitle: {
+        color: 'white',
+        fontSize: '35px'
+    },
+    startButton: {
+        color: 'white',
+        backgroundColor: 'black',
+        fontFamily: 'Amoung-us',
+        fontSize: '25px',
+        border: '1px solid white',
+        borderRadius: '5px',
+        padding: '5px 5px 0px 5px',
+        textDecoration: 'none',
+        textAlign: 'center',
+        verticalAlign: 'center',
+        height: '55px',
+        width: '95px'
     }
 });
 
@@ -41,6 +59,9 @@ const Multiplication = () => {
                 elevation={3}
             >
                 <h1 className={ classes.title }>Multiplication</h1>
+                <h3 className={ classes.subTitle }> Top Scores </h3>
+                <div className={ classes.highScores }></div>
+                <button className={ classes.startButton }>Start Quiz</button>
             </Paper>
         </div>
     )
