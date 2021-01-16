@@ -3,6 +3,8 @@ import React from "react";
 // Material imports
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
+// Other imports
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 
 
 const useStyles = makeStyles({
@@ -15,21 +17,27 @@ const useStyles = makeStyles({
     scoreCard: {
         height: '700px',
         width: '600px',
-        color: 'red',
+        display: 'flex',
+        flexFlow: 'column',
+        alignItems: 'center',
+        // justifyContent: 'center',
         backgroundColor: 'black',
         borderRadius: '15px',
         border: '1px solid white',
         fontFamily: 'Crewmate',
         textAlign: 'center',
-        fontSize: '30px',
+        fontSize: '32px',
         marginTop: '40px'
     },
     title: {
-        margin: '15px 0px 0px 0px'
+        color: 'red',
+        marginTop: '20px'
     },
     subTitle: {
         color: 'white',
-        fontSize: '35px'
+        fontSize: '35px',
+        textDecoration: 'underline',
+        marginTop: '0px'
     },
     startButton: {
         color: 'white',
@@ -44,6 +52,10 @@ const useStyles = makeStyles({
         verticalAlign: 'center',
         height: '55px',
         width: '95px'
+    },
+    highScores: {
+        height: '350px',
+        width: '200px',
     }
 });
 
@@ -59,10 +71,21 @@ const Multiplication = () => {
                 elevation={3}
             >
                 <h1 className={ classes.title }>Multiplication</h1>
-                <h3 className={ classes.subTitle }> Top Scores </h3>
-                <div className={ classes.highScores }></div>
-                <button className={ classes.startButton }>Start Quiz</button>
-            </Paper>
+                    <h3 className={ classes.subTitle }> Top Scores </h3>
+                    {/* <div className={ classes.highScores }></div> */}
+                    <CountdownCircleTimer
+                        isPlaying
+                        duration={60}
+                        colors={[
+                        ['#004777', 0.33],
+                        ['#F7B801', 0.33],
+                        ['#A30000', 0.33],
+                        ]}
+                    >
+                        {({ remainingTime }) => remainingTime}
+                    </CountdownCircleTimer>
+                    <button className={ classes.startButton }>Start Quiz</button>
+        </Paper>
         </div>
     )
 };

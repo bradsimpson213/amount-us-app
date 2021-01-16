@@ -10,8 +10,8 @@ const useStyles = makeStyles({
         margin: '30px 0px 0px 0px'       
     },
     scoreCard: {
-        height: '600px',
-        width: '500px',
+        height: '700px',
+        width: '600px',
         color: 'blue',
         backgroundColor: 'black',
         borderRadius: '15px',
