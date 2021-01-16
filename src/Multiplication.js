@@ -77,9 +77,9 @@ const Multiplication = () => {
                         isPlaying
                         duration={60}
                         colors={[
-                        ['#004777', 0.33],
-                        ['#F7B801', 0.33],
-                        ['#A30000', 0.33],
+                        ['green', 0.5],
+                        ['#F7B801', 0.25],
+                        ['#A30000', 0.25],
                         ]}
                     >
                         {({ remainingTime }) => remainingTime}
