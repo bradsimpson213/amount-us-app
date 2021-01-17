@@ -3,11 +3,11 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 // Custom Component imports
 import NavBar from "./NavBar";
-import ScoresList from "./ScoresList";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
 import Footer from "./Footer";
 import Multiplication from "./Multiplication";
+import CarouselContainer from "./CarouselContainer";
 // Style imports
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -30,7 +30,7 @@ const App = () => {
             <Route exact 
               path="/"
               render={ () => 
-                <ScoresList  /> }
+                <CarouselContainer /> }
             />
             <Route exact 
               path="/login/"

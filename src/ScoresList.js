@@ -1,31 +1,11 @@
 import React from "react";
+import Paper from "@material-ui/core/Paper";
+//Style imports
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper"
+import styles from "./styles/CardStyles";
 
-const useStyles = makeStyles({
-    root: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: '30px 0px 0px 0px'       
-    },
-    scoreCard: {
-        height: '700px',
-        width: '600px',
-        color: 'blue',
-        backgroundColor: 'black',
-        borderRadius: '15px',
-        border: '1px solid white',
-        fontFamily: 'Crewmate',
-        textAlign: 'center',
-        fontSize: '35px',
-        marginTop: '40px'
-    },
-    title: {
-        margin: '15px 0px 0px 0px'
-    }
-});
 
+const useStyles = makeStyles(styles);
 
 const ScoresList = () => {
     const classes = useStyles();
@@ -38,6 +18,7 @@ const ScoresList = () => {
                 elevation={3}
             >
                 <h1 className={ classes.title }>ScoresList</h1>
+                    <h3 className={ classes.subTitle }> Top Scores </h3>
             </Paper>
         </div>
       
