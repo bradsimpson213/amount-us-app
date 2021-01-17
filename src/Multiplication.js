@@ -21,7 +21,12 @@ const Multiplication = () => {
                 variant="outline"
                 elevation={3}
             >
-                <h1 className={ classes.title }>Multiplication</h1>
+                <h1 
+                    className={ classes.title }
+                    style={{ color: 'red' }}
+                >
+                    Multiplication
+                </h1>
                     
 {/*             
                     <CountdownCircleTimer

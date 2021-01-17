@@ -2,6 +2,7 @@
 import React from 'react';
 // Custom Components imports
 import ScoresList from "./ScoresList";
+import Addition from "./Addition";
 import Multiplication from "./Multiplication";
 // Carousel Components imports
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -22,6 +23,9 @@ const CarouselContainer = () => {
             >
                 <div>
                     <ScoresList />
+                </div>
+                <div>
+                    <Addition />
                 </div>
                 <div>
                     <Multiplication />

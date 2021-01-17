@@ -1,16 +1,20 @@
+// React imports
 import React from "react";
+// Material imports
 import Paper from "@material-ui/core/Paper";
-//Style imports
 import { makeStyles } from "@material-ui/core/styles";
+// Other imports
+// import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+// Style imports
 import styles from "./styles/CardStyles";
 
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(styles)
 
-const ScoresList = () => {
+const Addition = () => {
     const classes = useStyles();
-    return (
-        
+
+    return ( 
         <div className={ classes.root }>
             <Paper 
                 className={ classes.scoreCard }
@@ -18,16 +22,15 @@ const ScoresList = () => {
                 elevation={3}
             >
                 <h1 
-                    className={ classes.title } 
-                    style={{ color: 'blue' }}
+                    className={ classes.title }
+                    style={{ color: 'green' }}
                 >
-                    ScoresList
+                    Addition
                 </h1>
-                <h3 className={ classes.subTitle }> Top Scores </h3>
-            </Paper>
+                <button className={ classes.startButton }>Start Quiz</button>
+        </Paper>
         </div>
-      
     )
 };
 
-export default ScoresList;
+export default Addition;

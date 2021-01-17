@@ -21,7 +21,6 @@ const styles = {
         marginTop: '40px'
     },
     title: {
-        color: 'red',
         marginTop: '20px'
     },
     subTitle: {
