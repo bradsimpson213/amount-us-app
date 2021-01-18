@@ -6,7 +6,7 @@ import NavBar from "./NavBar";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
 import Footer from "./Footer";
-import Multiplication from "./Multiplication";
+import MultiplicationQuiz from "./MultiplicationQuiz";
 import CarouselContainer from "./CarouselContainer";
 // Style imports
 import { makeStyles } from "@material-ui/core/styles";
@@ -43,9 +43,9 @@ const App = () => {
                 <SignUpForm  /> }
             />
             <Route exact 
-              path="/multiplication/"
+              path="/quiz/multiplication/"
               render={ () => 
-                <Multiplication  /> }
+                <MultiplicationQuiz  /> }
             />
           </Switch>
         </div>

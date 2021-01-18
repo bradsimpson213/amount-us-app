@@ -1,5 +1,6 @@
 // React imports
 import React from "react";
+import { Link } from "react-router-dom";
 // Material imports
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
@@ -27,20 +28,12 @@ const Multiplication = () => {
                 >
                     Multiplication
                 </h1>
-                    
-{/*             
-                    <CountdownCircleTimer
-                        isPlaying
-                        duration={60}
-                        colors={[
-                        ['green', 0.5],
-                        ['#F7B801', 0.25],
-                        ['#A30000', 0.25],
-                        ]}
-                    >
-                        {({ remainingTime }) => remainingTime}
-                    </CountdownCircleTimer> */}
-                    <button className={ classes.startButton }>Start Quiz</button>
+                <Link 
+                    className={ classes.startButton }
+                    to="/quiz/multiplication"
+                >
+                    Start Quiz
+                </Link>
         </Paper>
         </div>
     )

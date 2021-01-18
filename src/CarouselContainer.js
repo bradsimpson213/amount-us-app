@@ -14,7 +14,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const CarouselContainer = () => {
 
-    const arrowStyles: CSSProperties = {
+    const arrowStyles = {
         position: 'absolute',
         zIndex: 2,
         top: 'calc(50% - 15px)',
@@ -37,20 +37,20 @@ const CarouselContainer = () => {
                 showStatus={false}
                 interval={4000}
                 transitionTime={500}
-                   renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                hasPrev && (
-                    <button type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 15 }}>
-                        { "<" }
-                    </button>
-                )
-            }
-            renderArrowNext={(onClickHandler, hasNext, label) =>
-                hasNext && (
-                    <button type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, right: 15 }}>
-                        { ">" }
-                    </button>
-                )
-            }
+                renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                    hasPrev && (
+                        <button type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 15 }}>
+                            { "<" }
+                        </button>
+                    )
+                }
+                renderArrowNext={(onClickHandler, hasNext, label) =>
+                    hasNext && (
+                        <button type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, right: 15 }}>
+                            { ">" }
+                        </button>
+                    )
+                }
             >
                 <div>
                     <ScoresList />
