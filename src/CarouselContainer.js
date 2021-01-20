@@ -6,13 +6,20 @@ import Addition from "./Addition";
 import Multiplication from "./Multiplication";
 import Division from "./Division";
 // Carousel Components imports
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 // Style imports
-// import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
+const useStyles = makeStyles({
+    root: {
+      width: '50%'
+        
+    }
+});
 
 const CarouselContainer = () => {
+    const classes = useStyles();
 
     const arrowStyles = {
         position: 'absolute',
@@ -30,41 +37,32 @@ const CarouselContainer = () => {
     };
    
     return (
-        <div style={{ width: "50%", alignContent: 'center' }}>
-            <Carousel
-                autoPlay
-                infiniteLoop
-                showStatus={false}
-                interval={4000}
-                transitionTime={500}
-                renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                    hasPrev && (
-                        <button type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 15 }}>
-                            { "<" }
-                        </button>
-                    )
-                }
-                renderArrowNext={(onClickHandler, hasNext, label) =>
-                    hasNext && (
-                        <button type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, right: 15 }}>
-                            { ">" }
-                        </button>
-                    )
-                }
+        <div className={ classes.root }>
+            <CarouselProvider
+                naturalSlideWidth={100}
+                naturalSlideHeight={125}
+                totalSlides={4}
+                isPlaying={ true }
             >
-                <div>
-                    <ScoresList />
-                </div>
-                <div>
-                    <Addition />
-                </div>
-                <div>
-                    <Multiplication />
-                </div>
-                <div>
-                    <Division />
-                </div>
-            </Carousel>
+                <ButtonBack>Back</ButtonBack>
+                <ButtonNext>Next</ButtonNext>
+                <Slider >
+                    <Slide index={0}>
+                        <ScoresList />
+                    </Slide>
+                    <Slide index={1}>
+                        <Addition />
+                    </Slide>
+                    <Slide index={2}>
+                        <Multiplication />
+                    </Slide>
+                    <Slide index={3}>
+                        <Division />
+                    </Slide>
+                    
+                </Slider>
+                
+            </CarouselProvider>
         </div>
     );
 };

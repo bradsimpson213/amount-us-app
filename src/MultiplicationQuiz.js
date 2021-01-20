@@ -4,7 +4,6 @@ import React from "react";
 import Paper from "@material-ui/core/Paper";
 // Other imports
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
-import Multiplication from "./Multiplication";
 // Style imports
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -31,14 +30,11 @@ const MultiplicationQuiz = () => {
     return (
         <div className={ classes.root }>       
             <CountdownCircleTimer
-                height="600px"
+                size="600"
                 isPlaying
                 duration={60}
-                colors={[
-                ['green', 0.5],
-                ['#F7B801', 0.25],
-                ['#A30000', 0.25],
-                ]}
+                colors={[['green', 0.5],['#F7B801', 0.25],['#A30000', 0.25],]}
+                trailColor="black"
             >
                 {({ remainingTime }) => remainingTime}
             </CountdownCircleTimer> 
